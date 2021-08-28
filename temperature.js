@@ -10,8 +10,12 @@ const loadCity = () => {
 
 const getTemp = (data) => {
     document.getElementById('current-temp').innerText = data.main.temp
-    console.log(data.main.temp);
+    let city = document.getElementById('city-name');
+    city.innerText = `${inputField.value.toUpperCase()}`
+    inputField.value = ''
 
+    document.getElementById('clouds').innerText = data.clouds.all;
+    
 }
 
 
